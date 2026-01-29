@@ -6,7 +6,7 @@ export default defineConfig({
   name: "sponsrbridge-blog",
   title: "SponsrBridge Blog",
 
-  projectId: process.env.SANITY_PROJECT_ID!,
+  projectId: import.meta.env.SANITY_STUDIO_PROJECT_ID,
   dataset: "production",
 
   plugins: [structureTool()],
