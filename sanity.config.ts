@@ -1,18 +1,15 @@
-import { defineConfig } from 'sanity';
-import { structureTool } from 'sanity/structure';
-import { visionTool } from '@sanity/vision';
-import { schemaTypes } from './schemas';
+import { defineConfig } from "sanity";
+import { structureTool } from "sanity/structure";
+import { schemaTypes } from "./schemas";
 
 export default defineConfig({
-  name: 'sponsrbridge-blog',
-  title: 'SponsrBridge Blog',
+  name: "sponsrbridge-blog",
+  title: "SponsrBridge Blog",
 
-  // TODO: Replace with your actual Sanity project ID and dataset
-  // Create a project at https://www.sanity.io/manage
-  projectId: 'rt9k03al',
-  dataset: 'production',
+  projectId: process.env.SANITY_PROJECT_ID!,
+  dataset: "production",
 
-  plugins: [structureTool(), visionTool()],
+  plugins: [structureTool()],
 
   schema: {
     types: schemaTypes,
