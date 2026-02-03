@@ -4,7 +4,13 @@
       "Bash(node -e:*)",
       "Bash(npm install)",
       "Bash(npx tsc:*)",
-      "Bash(ls:*)"
+      "Bash(ls:*)",
+      "WebSearch",
+      "WebFetch(domain:www.sanity.io)",
+      "Bash(if exist vite.config.js del vite.config.js)",
+      "Bash(del /F vite.config.js)",
+      "Bash(dir:*)",
+      "Bash(findstr:*)"
     ]
   }
 }
