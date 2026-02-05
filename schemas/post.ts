@@ -29,6 +29,14 @@ export default defineType({
       validation: (Rule) => Rule.required().max(300),
     }),
     defineField({
+      name: 'metaDescription',
+      title: 'Meta Description',
+      type: 'text',
+      rows: 2,
+      description: 'SEO meta description for search engines (155-160 characters recommended)',
+      validation: (Rule) => Rule.max(160),
+    }),
+    defineField({
       name: 'body',
       title: 'Body',
       type: 'array',
